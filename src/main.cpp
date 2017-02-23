@@ -103,9 +103,11 @@ void manage_buffer ()
 		{
 			if ((value & (1 << i )) != 0 ) 
 			{
+		                //Serial.print   ("Set high : "); Serial.println (i) ; 
 				digitalWrite ( i , HIGH);
 
 			} else {
+		                //Serial.print   ("Set low : "); Serial.println (i) ; 
 				digitalWrite ( i , LOW);
 			} 
 		}
@@ -123,7 +125,7 @@ void manage_buffer ()
 
 void setup ()
 {
-	for (int i = 0 ; i < 7 ; i ++ ) 
+	for (int i = 0 ; i < 8 ; i ++ ) 
 	{
 		pinMode(i, OUTPUT);
 		digitalWrite ( i , LOW);
